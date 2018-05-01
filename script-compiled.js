@@ -19,7 +19,7 @@ class Stopwatch {
   }
 
   format(times) {
-    return `${pad0(times.minutes)}:${pad0(times.seconds)}:${pad0(Math.floor(times.miliseconds))}`;
+    return `${pad0(this.times.minutes)}:${pad0(this.times.seconds)}:${pad0(Math.floor(this.times.miliseconds))}`;
   }
 
   start() {
@@ -55,7 +55,7 @@ class Stopwatch {
 
 function pad0(value) {
   let result = value.toString();
-  if (result.lenght < 2) {
+  if (result.length < 2) {
     result = '0' + result;
   }
   return result;
