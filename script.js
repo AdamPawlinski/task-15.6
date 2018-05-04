@@ -19,7 +19,7 @@ class Stopwatch {
   }
 
   format(times) {
-    return `${pad0(this.times.minutes)}:${pad0(this.times.seconds)}:${pad0(Math.floor(this.times.miliseconds))}`
+    return `${pad0(this.times.minutes)}:${pad0(this.times.seconds)}:${pad0(Math.floor(this.times.miliseconds))}`;
   }
 
   start() {
@@ -65,7 +65,7 @@ const stopwatch = new Stopwatch(
   document.querySelector('.stopwatch')
 );
 
-let startButton = document.getElementById('start');
+const startButton = document.getElementById('start');
 startButton.addEventListener('click', () => stopwatch.start());
-let stopButton = document.getElementById('stop');
+const stopButton = document.getElementById('stop');
 stopButton.addEventListener('click', () => stopwatch.stop());
